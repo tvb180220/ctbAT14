@@ -1,0 +1,68 @@
+Bài 4:
+CONVERSATION: 2 14 13 21 4  17 18 0  19 8  14 13
+HIARRTNUYTUS: 7 8  0  17 17 19 13 20 24 19 20 18
+
+Nếu xét m = 2, ta được các cặp từ tương ứng:
+x = (2,14) (13,21) (4,17)  (18,0)  (19,8)  (14,13)
+y = (7,8)  (0,17)  (17,19) (13,20) (24,19) (20,18)
+Khóa k có dạng k = (k11 k12)
+		   (k21 k22)
+Hàm tạo mã y = xk nên hệ phương trình là:
+2*k11  + 14*k21 = 7
+2*k12  + 14*k22 = 8
+13*k11 + 21*k12 = 0
+13*k12 + 21*k22 = 17
+Vô nghiệm (loại)
+
+Nếu m = 3, ta được:
+x = (2,14,13)  (21,4,17)  (18,0,19)  (8,14,13)
+y = (7,8,0)    (17,17,19) (13,20,24) (19,20,18)
+Khóa k = (k11 k12 k13)
+	 (k21 k22 k23)
+	 (k31 k32 k33)
+Hàm y = xk,
+2*k11 + 14*k21 + 13*k31 = 7
+2*k12 + 14*k22 + 13*k32 = 8
+2*k13 + 14*k23 + 13*k33 = 0
+21*k11 + 4*k21 + 17*k31 = 17
+21*k12 + 4*k22 + 17*k32 = 19
+21*k13 + 4*k23 + 17*k33 = 13
+18*k11 + 0*k21 + 19*k31 = 13
+18*k12 + 0*k22 + 19*k32 = 20
+18*k13 + 0*k23 + 19*k33 = 24
+<=> k11 = 2	k21 = 16	k31 = 7
+    k12 = 15	k22 = 4		k32 = 6
+    k13 = 3	k23 = 0		k33 = 8
+Ma trận mã hóa k = (2  15  3)
+		   (16 4  20)
+		   (7  6   8)
+
+Bài 7:
+a. Giải:
+Chia bản mã thành các khối m*n ký tự
+Sắp xếp lại các khối theo cách sau:
+1+0*n,1+1*n,...,1+(m-1)*n
+2+0*n,2+2*n,...,2+(m-1)*n
+.........................
+n+0*n,n+1*n,...,n+(m-1)*n
+b. MYAMRARUYIQTENCTORAHROYWDDSOYEOUARRGDDERNOGW
+Mã có 42 ký tự chia thành các cặp sau:
+2x21,21x2,3x14,14x3,6x7,7x6
+Tìm ra trường hợp 6x7 dựa theo thuật toán Vét cạn
+7 khối, 6 ký tự/khối, m = 3, n = 2
+MYAMRA
+RUYIQT
+VICTOR
+AHROYW
+DSOYEO
+UARRGD
+ERNOGW
+Sắp xếp lại:
+MARYMA
+RYQUIT
+ECONTR
+ARYHOW
+DOESYO
+URGARD
+ENGROW
+=> MARY MARY QUITE CONTRARY HOW DOES YOUR GARDEN GROW
